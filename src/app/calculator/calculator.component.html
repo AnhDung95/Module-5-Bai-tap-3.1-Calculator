@@ -1,0 +1,13 @@
+<p>calculator works!</p>
+<input size="5" type="number" placeholder="First number" name="firstNum" id="firstNum" [value]="firstNum" (change)="onFirstChange($event)">
+<select name="operation" id="operation" [value]="operator" (change)="onSelectChange($event)">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<input size="5" type="number" placeholder="Second number" name="secondNum" id="secondNum" [value]="secondNum" (change)="onSecondChange($event)">
+<div>
+  <button color="primary" type="button" (click)="calculate()">Submit</button>
+</div>
+<div *ngIf="result >= 0">{{result}}</div>
